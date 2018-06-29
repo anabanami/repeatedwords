@@ -5,8 +5,8 @@ import string
 
 def find_tex():
     tex_files = []
-        for file in glob.glob('*.tex'):
-            tex_files.append(file)
+    for file in glob.glob('*.tex'):
+        tex_files.append(file)
     return tex_files
 
 def repeat(filename):
@@ -45,12 +45,10 @@ def repeat(filename):
     for k in duplicates:
         print(k)
 
-
-
 if __name__ == '__main__':
     
     os.chdir('/home/ana/thesis')
-    find_tex()
-    for file in tex_files:
-        input_file = open("file", 'r')
+    for file in find_tex():
+        print(file)
+        input_file = open(file, 'r')
         repeat(input_file)
