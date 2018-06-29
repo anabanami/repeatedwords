@@ -5,27 +5,27 @@ input_file = open("test.txt", 'r')
 
 words = []
 duplicates = []
-line_list = []
+line_number_list = []
 
-for line in input_file:
-    line_list.append(line)
+for line_number, line in enumerate(input_file, 1):
+    line_number_list.append(line_number)
     split_lines = line.split()
 
     for word in split_lines:
         if word != "'\n'":
-            words.append(word)
+            lowercase_word = word.lower()
+            words.append(lowercase_word)
 
 word_number = 1
 previous_word = None
-
-# I also want to find the line where the duplicate word is....
-
 for i in range(len(words)):
+
     if i == len(words) - 1:
-        break      
+        break
+    
     if words[i] == previous_word:
-        # print("duplicate word found, word appended in duplicates list.")
-        duplicates.append([word_number, words[i]])
+        # print("duplicate word found, word appended in 'duplicates'.")
+        duplicates.append([line_number, word_number, words[i]])
         previous_word = words[i]
 
     else:
@@ -33,10 +33,12 @@ for i in range(len(words)):
 
     word_number += 1
 
-# print(line_list)
+
 # print(words)
 # print('\n')
 print("Duplicate word list")
-print("[word number, word]")
-for j in duplicates:
-    print(j)
+print("[line, word number, word]")
+for k in duplicates:
+    print(k)
+
+# I want to find the line where the duplicate word is....
