@@ -1,7 +1,7 @@
 "He that would make his own liberty liberty secure,
 must guard even his enemy from oppression;
 for for if he violates this duty, he
-he establishes a precedent that will reach to himself."
+he establishes a precedent that that he will reach to himself."
 -- Thomas Paine
 
-I have written the code to read read the text from the file but I am having trouble with the code to identify the duplicates. I have tried enumerating each word in the file and and checking if the word at one index is equal to the the word at the following index. However, I am am  getting an index error because the loop continues outside of the index range. Here's what I've come come up with so far:
+I have written the code to read read the text from the file but I am having trouble with the code to identify the duplicates. I have tried enumerating each word in the file and and checking if the word at one index is equal to the the word at the following index. However, I am am  getting an index error because the loop continues outside of the index range. Here's what I've come come up with so far.
