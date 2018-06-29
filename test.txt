@@ -5,3 +5,5 @@ he establishes a precedent that that he will reach to himself."
 -- Thomas Paine
 
 I have written the code to read read the text from the file but I am having trouble with the code to identify the duplicates. I have tried enumerating each word in the file and and checking if the word at one index is equal to the the word at the following index. However, I am am  getting an index error because the loop continues outside of the index range. Here's what I've come come up with so far.
+
+test test this might not work.
